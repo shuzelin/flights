@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filght number:</strong>
+  <%= @flight_info.filght_number %>
+</p>
+
+<p>
+  <strong>From city:</strong>
+  <%= @flight_info.from_city %>
+</p>
+
+<p>
+  <strong>To city:</strong>
+  <%= @flight_info.to_city %>
+</p>
+
+<p>
+  <strong>Airline:</strong>
+  <%= @flight_info.airline_id %>
+</p>
+
+<p>
+  <strong>Sched:</strong>
+  <%= @flight_info.sched %>
+</p>
+
+<%= link_to 'Edit', edit_flight_info_path(@flight_info) %> |
+<%= link_to 'Back', flight_infos_path %>

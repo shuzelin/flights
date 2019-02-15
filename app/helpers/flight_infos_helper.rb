@@ -1,0 +1,2 @@
+module FlightInfosHelper
+end

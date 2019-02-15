@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filght_number: MyString
+  from_city: MyString
+  to_city: MyString
+  airline_id: 
+  sched: 2019-02-06 21:56:43
+
+two:
+  filght_number: MyString
+  from_city: MyString
+  to_city: MyString
+  airline_id: 
+  sched: 2019-02-06 21:56:43
