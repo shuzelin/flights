@@ -17,9 +17,9 @@ class Platform
       flight_hash_map[flight_info.price(passenger)] ||= []
       flight_hash_map[flight_info.price(passenger)] += [flight_info]
     end
-    #
+
     flight_hash_map.keys.sort.map do |key|
       flight_hash_map[key].sort_by(&:sched)
-    end
+    end.flatten
   end
 end
