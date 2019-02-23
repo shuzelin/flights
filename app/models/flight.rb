@@ -1,4 +1,4 @@
-class FlightInfo
+class Flight
   include Mongoid::Document
   include Mongoid::Timestamps
 

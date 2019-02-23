@@ -6,9 +6,9 @@ class Passenger
   field :name, type: String
   enum :category, [:ordinary, :reward], :default => :ordinary
 
-  def make_journey(departing_date: nil, returning_date: nil,
+  def make_trip(departing_date: nil, returning_date: nil,
                    to_city: nil, from_city: nil)
-    Passengers::Journey.new(
+    Passengers::Trip.new(
       passenger: self,
       departing_date: departing_date,
       returning_date: returning_date,

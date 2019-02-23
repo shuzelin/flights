@@ -16,7 +16,7 @@ class FlightTemplate
   belongs_to :airline
 
   def create_flight_info(flighting_date: nil)
-    FlightInfo.create({
+    Flight.create({
       filght_number: self.filght_number,
       from_city: self.from_city,
       to_city: self.to_city,

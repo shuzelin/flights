@@ -8,5 +8,5 @@ class order
   enum :status, [:pending, :completed, :failed], :default => :pending
 
   belongs_to :passenger
-  has_many :flight_infos
+  has_many :flights
 end
