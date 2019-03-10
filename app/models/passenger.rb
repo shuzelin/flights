@@ -1,15 +1,18 @@
 class Passenger
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  include Mongoid::Enum
+  attr_accessor :name, :category
 
   CATEGORIES = [:ordinary, :reward]
 
-  field :name, type: String
-  enum :category, CATEGORIES, :default => :ordinary
+  def initialize(name: nil, category: nil)
+    self.name = name
+    if Passenger::CATEGORIES.exclude? category
+      raise "<CUSTOMER_TYPE> should be ordinary or reward"
+    end
+    self.category = category
+  end
 
   def make_trip(departing_date: nil, returning_date: nil,
-                to_city: nil, from_city: nil)
+                to_city: "Chengdu", from_city: "Xi'an")
     Passengers::Trip.new(
       passenger: self,
       departing_date: departing_date,
